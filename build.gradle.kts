@@ -9,7 +9,7 @@ plugins {
 version = "0.1"
 group = "br.com.victor"
 
-val kotlinVersion = project.properties.get("kotlinVersion")
+val kotlinVersion = project.properties["kotlinVersion"]
 repositories {
     mavenCentral()
 }
@@ -27,7 +27,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
-
+    implementation("io.micronaut.liquibase:micronaut-liquibase")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
 }
